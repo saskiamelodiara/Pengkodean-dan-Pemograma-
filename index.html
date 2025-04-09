@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventoryStock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="User Avatar" class="avatar">
+            <span>Stock Smart</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li><i class="fas fa-box"></i> Product</li>
+                <li><i class="fas fa-users"></i> Customer</li>
+                <li><i class="fas fa-shopping-cart"></i> Sales</li>
+                <li><i class="fas fa-truck"></i> Supplier</li>
+                <li><i class="fas fa-sign-in-alt"></i> Product In</li>
+                <li><i class="fas fa-sign-out-alt"></i> Product Out</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <h1>InventoryStock</h1>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-user-circle"></i>
+                <span>Saskia Melodia</span>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header blue">Users</div>
+                <div class="card-body">
+                    <h2>2</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header green">Category</div>
+                <div class="card-body">
+                    <h2>3</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header yellow">Product</div>
+                <div class="card-body">
+                    <h2>1</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header red">Customer</div>
+                <div class="card-body">
+                    <h2>167</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header dark-blue">Sales</div>
+                <div class="card-body">
+                    <h2>13</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header light-blue">Supplier</div>
+                <div class="card-body">
+                    <h2>28</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header pink">Product In</div>
+                <div class="card-body">
+                    <h2>2</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header gray">Product Out</div>
+                <div class="card-body">
+                    <h2>2</h2>
+                    <a href="#" class="more-info">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="success-message">
+                <p>You are logged in!</p>
+            </div>
+            <div class="form-container">
+                <h2>Add New Item</h2>
+                <form id="inventoryForm">
+                    <input type="text" id="itemName" placeholder="Item Name" required>
+                    <input type="number" id="quantity" placeholder="Quantity" required>
+                    <input type="number" id="price" placeholder="Price" step="0.01" required>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+            <div class="table-container">
+                <h2>Inventory List</h2>
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
